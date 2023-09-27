@@ -1,0 +1,28 @@
+.card {
+  margin: 10px;
+  color: white;
+  text-align: center;
+  height: 60vh;
+  width: 40vh;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba($color: brown, $alpha: 0.3);
+  .background_image {
+    height: 60vh;
+    width: 40vh;
+    position: absolute;
+
+    // transition: transform 0.5s;
+    // transform-style: preserve-3d;
+
+    &:hover {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+  }
+  .description {
+    display: inline-block;
+    z-index: -1;
+    text-align: center;
+  }
+}

@@ -1,17 +1,17 @@
 import React from "react";
 import Card from "../../components/Card/Card";
-
+import styles from "./BookList.module.scss";
 const BookList = ({ data }) => {
   console.log("data: ", data);
   return (
-    <div>
-      {data.items.map((book) => (
+    <div className={styles.cardWrapper}>
+      {data.map((book) => (
         <Card
           key={book.id}
-          title={book.volumeInfo.title}
-          author={book.volumeInfo.authors}
-          description={book.volumeInfo.description}
-          image={book.volumeInfo.imageLinks.smallThumbnail}
+          title={book.title}
+          author={book.authors}
+          description={book.description}
+          image={book.image.thumbnail}
         />
       ))}
     </div>
